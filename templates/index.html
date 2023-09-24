@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <title>Online Store</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to Our Store</h1>
+    <ul>
+      {% for product in products %}
+        <li>
+          <span class="product-name">{{ product.name }}</span>
+          <span class="product-price">${{ product.price }}</span>
+          {% if cart and product.id in cart %}
+            <span class="in-cart-label">(In Cart)</span>
+          {% else %}
+            <a href="/add_to_cart/{{ product.id }}" class="add-to-cart-link">Add to Cart</a>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+    <a href="/cart" id="cart-link">View Cart</a>
+    <div id="login-button-container">
+      <a href="/login" class="login-button">Login</a>
+    </div>
+  </div>
+</body>
+</html>

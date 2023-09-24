@@ -1,0 +1,137 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+a {
+    text-decoration: none;
+    color: #3498db;
+}
+
+a:hover {
+    color: #2980b9;
+}
+
+#cart-link {
+    display: block;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+#cart-link:hover {
+    color: #e74c3c;
+}
+
+.product-name {
+    width: 45%; /* Уменьшим ширину для названия продукта */
+    display: inline-block;
+}
+
+.product-quantity, .product-price {
+    width: 25%; /* Уменьшим ширину для количества и цены */
+    display: inline-block;
+    text-align: left; /* Выравнивание "Quantity" и "Total" влево */
+    margin-right: 10px; /* Отступ справа для "Quantity" и "Total" */
+}
+
+.remove-link {
+    font-size: 12px; /* Уменьшим размер текста "Remove from Cart" */
+    margin-top: 5px; /* Отступ сверху для "Remove from Cart" */
+}
+
+.add-to-cart-link {
+    font-size: 14px; /* Уменьшим размер текста "Add to Cart" */
+    margin-top: 5px; /* Отступ сверху для "Add to Cart" */
+}
+
+#login-button-container {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+.login-button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+}
+  
+.login-button:hover {
+    background-color: #ffffff;
+}
+
+#login-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#login-container h1 {
+  color: #333;
+  text-align: center;
+}
+
+.login-form {
+  margin-top: 20px;
+}
+
+.login-form input {
+    width: 100%;
+    max-width: 379px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background-color: #2980b9;
+}
+  

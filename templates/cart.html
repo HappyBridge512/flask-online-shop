@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <title>Cart</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Your Cart</h1>
+    <ul>
+      {% for item in products %}
+        <li>
+          <span class="product-name">{{ item.product.name }}</span>
+          <span class="product-quantity">Quantity: {{ item.quantity }}</span>
+          <span class="product-price">Total: ${{ item.product.price * item.quantity }}</span>
+          <a href="/remove_from_cart/{{ item.product.id }}" class="remove-link">Remove</a>
+        </li>
+      {% endfor %}
+    </ul>
+    <p id="total-price">Total Price: ${{ total_price }}</p>
+    <a href="/" id="cart-link">Back to Store</a>
+  </div>
+</body>
+</html>
