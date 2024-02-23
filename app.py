@@ -16,7 +16,6 @@ class Product(db.Model):
 
 # Создаем контекст приложения
 with app.app_context():
-    # Создаем таблицу, если ее нет
     db.create_all()
 
 # Flask-Admin
@@ -73,10 +72,6 @@ def cart():
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
-        # Здесь вы можете реализовать проверку учетных данных
-        # Например, проверка имени пользователя и пароля в базе данных
-
-        # В данном примере просто перенаправляем пользователя на главную страницу
         return redirect(url_for('index'))
 
     return render_template('login.html')
